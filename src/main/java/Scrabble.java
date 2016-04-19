@@ -38,17 +38,17 @@ public class Scrabble {
 
     if ( userWord.equals("a") || userWord.equals("e") || userWord.equals("i") || userWord.equals("o") || userWord.equals("u") || userWord.equals("l") || userWord.equals("n") || userWord.equals("r") || userWord.equals("s") || userWord.equals("t") ) {
       return 1;
-    } else if ( userWord == "d" || userWord == "g") {
+    } else if ( userWord.equals("d") || userWord.equals("g") ) {
       return 2;
-    } else if ( userWord == "b" || userWord == "c" || userWord == "m" || userWord == "p") {
+    } else if ( userWord.equals("b") || userWord.equals("c") || userWord.equals("m") || userWord.equals("p") ) {
       return 3;
-    } else if ( userWord == "f" || userWord == "h" || userWord == "v" || userWord == "w" || userWord == "y") {
+    } else if ( userWord.equals("f") || userWord.equals("h") || userWord.equals("v") || userWord.equals("w") || userWord.equals("y") ) {
       return 4;
-    } else if ( userWord == "k") {
+    } else if ( userWord.equals("k") ) {
       return 5;
-    } else if ( userWord == "x" || userWord == "j") {
+    } else if ( userWord.equals("x") || userWord.equals("j") ) {
       return 8;
-    } else if ( userWord == "z" || userWord == "q") {
+    } else if ( userWord.equals("z") || userWord.equals("q") ) {
       return 10;
     } else {
       return 568;
