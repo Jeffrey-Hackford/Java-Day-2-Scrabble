@@ -19,9 +19,10 @@ public class Scrabble {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/results.vtl");
 
-      String userWord = request.queryParams("word");
+      String inputtedWord = request.queryParams("word");
+      System.out.println(inputtedWord);
       Scrabble myScrabble = new Scrabble();
-      Integer results = myScrabble.calculateScore(userWord);
+      Integer results = myScrabble.calculateScore(inputtedWord);
 
       model.put("results", results);
 
@@ -31,7 +32,11 @@ public class Scrabble {
 
 
   public static Integer calculateScore(String userWord) {
-    if ( userWord == "a" || userWord == "e" || userWord == "i" || userWord == "o" || userWord == "u" || userWord == "l" || userWord == "n" || userWord == "r" || userWord == "s" || userWord == "t") {
+
+    //.equals to compare strings
+    //userWord.equals("a")
+
+    if ( userWord.equals("a") || userWord.equals("e") || userWord.equals("i") || userWord.equals("o") || userWord.equals("u") || userWord.equals("l") || userWord.equals("n") || userWord.equals("r") || userWord.equals("s") || userWord.equals("t") ) {
       return 1;
     } else if ( userWord == "d" || userWord == "g") {
       return 2;
@@ -46,7 +51,7 @@ public class Scrabble {
     } else if ( userWord == "z" || userWord == "q") {
       return 10;
     } else {
-      return 0;
+      return 568;
     }
   }
 }
